@@ -1,0 +1,31 @@
+{
+  "name": "oobe-agent",
+  "version": "1.0.0",
+  "description": "Steve Momentum — autonomous capital agent on Solana (paper trading). Built on the OOBE Synapse SDK + MCP. No real funds, no private keys.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.ts",
+    "backtest": "node dist/cli.js backtest",
+    "live": "node dist/cli.js live",
+    "mcp": "node dist/cli.js mcp",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@langchain/core": "^0.3.80",
+    "@oobe-protocol-labs/synapse-client-sdk": "^2.0.6",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.9.3"
+  },
+  "type": "module"
+}
